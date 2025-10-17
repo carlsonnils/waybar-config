@@ -51,7 +51,7 @@ tooltip label {
 #tray {
     padding-left: 20px;
     padding-right: 20px;
-    background: rgba(10, 10, 10, 0.6);
+    background: rgba(10, 10, 10, 0.75);
     color: white;
     border-radius: 10px;
 }
