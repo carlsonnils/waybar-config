@@ -1,0 +1,78 @@
+/*
+minimal waybar style
+*/
+
+* {
+    border: none;
+    font-family: Sono;
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    color: white;
+}
+
+tooltip {
+  background: rgba(43, 48, 59, 0.5);
+  border: 1px solid rgba(100, 114, 125, 0.5);
+}
+tooltip label {
+  color: white;
+}
+
+#workspaces button {
+    color: white;
+    border-radius: 5px;
+}
+
+#workspaces button.active {
+    border: 1px solid rgba(150, 150, 150, 0.5);
+}
+
+#workspaces {
+    margin-left: 20px;
+}
+
+#clock {
+    margin-right: 20px;
+}
+
+#window,
+#workspaces,
+#keyboard-state,
+#pulseaudio,
+#network,
+#cpu,
+#memory,
+#battery,
+#clock,
+#tray {
+    padding-left: 20px;
+    padding-right: 20px;
+    background: rgba(10, 10, 10, 0.6);
+    color: white;
+    border-radius: 10px;
+}
+
+#battery.charging {
+    background-color: rgba(100, 255, 100, 0.2);
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: black;
+    }
+}
+
+#battery.warning:not(.charging) {
+    background: #f53c3c;
+    color: white;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
